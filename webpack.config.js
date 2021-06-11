@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -31,7 +32,7 @@ module.exports = {
                         }
                     },
                     {
-                        loader: 'image-webpack-loader'
+                        loader: ImageMinimizerPlugin.loader
                     }
                 ]
             }
